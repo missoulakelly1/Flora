@@ -12052,16 +12052,29 @@ $delay: 0;
 /* #Custom Styles
 ================================================== */
 
-/*Variables*/
+/*Font Variables*/
 $primary-font-color: #FADCDC;
+$secondary-font-color: #4123AE;
+$accent-font: #ABCE37;
+$neon-green-accent: #B6E618;
+$testimonial-headline: 75px;
+$testimonial-line-height: 70px;
+$testimonial-letter-spacing: 19.34px;
 $heading-font-size: 36px;
+$subheading-font-size: 32px;
 $header-letter-spacing: 1.13px;
+$subheader-letter-spacing: 2px;
 $custom-line-height: 46px;
 /*buttons*/
 $button-font-size: 14px;
 $button-letter-spacing: 3px;
 $button-line-height: 23px;
 
+/*back ground colors*/
+$brand-background: #1C0B5A;
+$secondary-brand-background: #F0DEBA;
+$tertiary-brand-background: #FEFFEC;
+$quad-brand-background: #270031;
 
 a.action_button{
   background-color: #efefef;
@@ -12083,16 +12096,30 @@ h6 a, #nav li a, div.title a,
 
 /*homepage image w/ text header*/
 #shopify-section-1508451701401 {
-
+  img {
+    @include respond-to('medium-down') {
+      width: 100%;
+      max-width: 100%;
+      height: 70vh;
+    }
+  }
  .caption-content {
   max-width: 80%;
- 
+  @include respond-to('small-down') {
+    width: 100%;
+    max-width: 100%;
+  }
   .subtitle {
     font-size: $heading-font-size;
     color: $primary-font-color;
     letter-spacing: $header-letter-spacing;
     line-height: $custom-line-height;
-    width: 800px;
+    
+    @include respond-to('small-down') {
+      font-size: 24px;
+      line-height: 32px;
+      text-align: center;
+    }
   }
   a.action_button {
     color: $primary-font-color;
@@ -12114,5 +12141,118 @@ h6 a, #nav li a, div.title a,
   right: 0;
   left: 0;
   margin: auto;
+  @include respond-to('small-down') {
+    display: none;
+  }
 }
+}
+
+/***********Home page product banner (rich text & image)*********/
+
+#shopify-section-1588088581629 {
+  .container {
+    @extend .full-width--true; 
+    padding: 0;
+   div.sixteen {
+     width: 100%;
+     margin-left: 0;
+     margin-right: 0;
+   
+   div.rich-text__text{
+     color: $secondary-font-color;
+     font-size: $subheading-font-size;
+     letter-spacing: $subheader-letter-spacing;
+     position: absolute;
+     top: 10%;
+     right: 0;
+     left: 0;
+     margin: auto;
+
+  }
+  a.action_button {
+    color: $secondary-font-color;
+    font-size: $button-font-size;
+    letter-spacing: $button-letter-spacing;
+    line-height: $button-line-height;
+    background-color: transparent;
+    border: 1.25px solid $secondary-font-color;
+    border-radius: 0;
+    
+  }
+}
+}
+}
+
+/*******brand Rich text description*******/
+
+#shopify-section-1588088864130 {
+  background-color: $brand-background;
+  .container {
+    @extend .full-width--true; 
+    padding: 0;
+   div.sixteen {
+     width: 100%;
+     margin-left: 0;
+     margin-right: 0;
+     .rich-text__content {
+      max-width: 40%;
+      margin: auto;
+     
+   h2 {
+     color: $accent-font;
+   }
+   .feature_divider{
+     display: none;
+   }
+   div.rich-text__text{
+     color: $primary-font-color;
+     font-size: 24px;
+     margin-top: 100px;
+     margin-bottom: 40px;
+     line-height: 34px;
+     letter-spacing: 0.75px;
+  }
+}
+}
+}
+}
+/***********first collection callout********/
+#shopify-section-1588088738703 {
+  background-color: $brand-background;
+  .product-details{
+    
+    display: inline-flex;
+    
+    .price {
+      justify-content: flex-end;
+
+    }
+  }
+}
+
+/**********shop first collection CTA********/
+#shopify-section-1588089042408 {
+  background-color: $brand-background;
+
+  a.action_button{
+    background-color: $accent-font;
+    color: $brand-background;
+    border: none;
+    letter-spacing: 3px;
+    line-height: 23px;
+    width: 162px;
+    height: 23px;
+  }
+}
+
+/********homepage testimonial*********/
+#shopify-section-1588089560041{
+  background-color: $brand-background;
+  .headline {
+    color: $neon-green-accent;
+    font-size: $testimonial-headline;
+    line-height: $testimonial-line-height;
+    letter-spacing: $testimonial-letter-spacing;
+
+  }
 }
