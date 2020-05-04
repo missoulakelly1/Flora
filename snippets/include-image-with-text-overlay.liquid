@@ -110,10 +110,14 @@
           <a {% if button2_link != blank %}href="{{ button2_link }}"{% endif %} class="action_button second_button highlight-{{ button2_highlight }}">
             {{ button2 }}
           </a>
-        {% endif %}
+       
+          {% endif %}
+          
       </div>
+      
     </div>
   {% endunless %}
+  <span class="center icon-down-arrow"></span>
 </section>
 
 {% if wide_display == false %}

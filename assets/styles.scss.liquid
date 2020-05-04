@@ -12051,6 +12051,68 @@ $delay: 0;
 
 /* #Custom Styles
 ================================================== */
+
+/*Variables*/
+$primary-font-color: #FADCDC;
+$heading-font-size: 36px;
+$header-letter-spacing: 1.13px;
+$custom-line-height: 46px;
+/*buttons*/
+$button-font-size: 14px;
+$button-letter-spacing: 3px;
+$button-line-height: 23px;
+
+
 a.action_button{
   background-color: #efefef;
+}
+
+/*adobe cora font*/
+
+body {
+  font-family: cora, sans-serif;
+font-style: normal;
+font-weight: 400;
+}
+
+h1, h1 a, h2, 
+h2 a, h3, h3 a, h4, 
+h4 a, h5, h5 a, h6, 
+h6 a, #nav li a, div.title a, 
+.headline, .subtitle { font-family: 'cora' !important; };
+
+/*homepage image w/ text header*/
+#shopify-section-1508451701401 {
+
+ .caption-content {
+  max-width: 80%;
+ 
+  .subtitle {
+    font-size: $heading-font-size;
+    color: $primary-font-color;
+    letter-spacing: $header-letter-spacing;
+    line-height: $custom-line-height;
+    width: 800px;
+  }
+  a.action_button {
+    color: $primary-font-color;
+    font-size: $button-font-size;
+    letter-spacing: $button-letter-spacing;
+    line-height: $button-line-height;
+    background-color: transparent;
+    border: 1.25px solid $primary-font-color;
+    border-radius: 0;
+    margin-top: 3rem;
+  }
+  
+}
+.icon-down-arrow{
+  color: $primary-font-color;
+  font-size: $heading-font-size !important;
+  position: absolute;
+  bottom: 20px;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
 }
