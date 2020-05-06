@@ -1,0 +1,109 @@
+{% comment %}
+**Custom section**
+image w/ text ---- overlapping images -- images on the left
+** Image with text (half and half view) - homepage partial **
+- Draggable section
+
+{% endcomment %}
+
+<div class="container full-width--true">
+    <div class="sixteen columns">
+        <div class="four columns">
+            {% if section.settings.image1 != blank %}
+            {% include 'image-element', image: section.settings.image1.src, alt: section.settings.image1.src %}
+          {% else %}
+            <p>
+              {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+            </p>
+          {% endif %}
+        </div>
+        <div class="four columns">
+{% if section.settings.image2 != blank %}
+            {% include 'image-element', image: section.settings.image2.src, alt: section.settings.image2.alt %}
+          {% else %}
+            <p>
+              {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+            </p>
+          {% endif %}
+        </div>
+
+        <div class="eight columns">
+            {% if section.settings.title != blank %}
+<h2>{{ section.settings.title }}</h2>
+{% endif %}
+{% if section.settings.subtitle != blank %}
+<h3>{{ section.settings.subtitle }}</h3>
+{% endif %}
+{% if section.settings.paragraph != blank %}
+<p>{{ section.settings.paragraph }}</p>
+{% endif %}
+{% if section.settings.linktext != blank and section.settings.link != blank %}
+<a href="{{ section.settings.link }}" class="action_button continue-button">
+  {{ section.settings.linktext | escape }}
+</a>
+{% endif %}
+        </div>
+       
+    </div>
+</div>
+
+{% schema %}
+{
+  "name": "Text with two images left",
+  "settings": [
+    {
+      "id": "title",
+      "type": "text",
+      "label": "Heading",
+      "default": "Title"
+    },
+    {
+        "id": "subtitle",
+        "type": "text",
+        "label": "Subtitle",
+        "default": "SubTitle"
+      },
+      {
+        "id": "paragraph",
+        "type": "textarea",
+        "label": "Paragraph",
+        "default": "Paragraph"
+      },
+    {
+      "id": "link",
+      "type": "url",
+      "label": "Button link"
+    },
+    {
+      "id": "linktext",
+      "type": "text",
+      "label": "Button text",
+      "default": "Click here"
+    },
+    {
+        "id": "image1",
+        "type": "image_picker",
+        "label": "image 1"
+       
+      },
+      {
+        "id": "image2",
+        "type": "image_picker",
+        "label": "image 2"
+        
+      }
+  ],
+  "presets": [
+    {
+      "name": "Text with two Images left",
+      "category": "Text"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
