@@ -12057,6 +12057,7 @@ $primary-font-color: #FADCDC;
 $secondary-font-color: #4123AE;
 $accent-font: #ABCE37;
 $neon-green-accent: #B6E618;
+$dark-purple: #2e1f1f;
 $testimonial-headline: 75px;
 $testimonial-line-height: 70px;
 $testimonial-letter-spacing: 19.34px;
@@ -12356,4 +12357,70 @@ h6 a, #nav li a, div.title a,
 .flickity-page-dots {
   display: none;
 }
+}
+
+/***************home page image stack right*********/
+
+#image-stack-right{
+  background-color: $tertiary-brand-background;
+.container {
+    .eight {
+      text-align: center;
+    h2 {
+      color: $secondary-font-color;
+      
+    }
+    h3 {
+      color: $secondary-font-color;
+      font-size: $heading-font-size;
+      line-height: $custom-line-height;
+      padding: 20% 10% 5% 10%;
+      text-transform: none;
+      width: 80%;
+    }
+    p {
+      color: $dark-purple;
+    }
+    a.action_button{
+      color: $secondary-font-color;
+      background-color: transparent;
+      border: 1.25px solid $secondary-font-color;
+    }
+    }
+  .image-stack {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    position: relative;
+  }
+  .image-stack__item--top{
+    grid-column: 1 / span 8;
+    grid-row: 1; 
+    padding-top: 60%;
+    z-index: 1;
+  }
+  .image-stack__item--bottom{
+    grid-column: 4 / -1;
+    grid-row: 1;
+  }
+}
+}
+
+/***************home page image stack left*********/
+
+#image-stack-left{
+   div.image-stack {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    position: relative;
+  }
+  .image-stack__item--top{
+    grid-column: 1 / span 8;
+    grid-row: 1; 
+    padding-top: 30%;
+    z-index: 1;
+  }
+  .image-stack__item--bottom{
+    grid-column: 4 / -1;
+    grid-row: 1;
+  }
 }

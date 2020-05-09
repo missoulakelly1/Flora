@@ -5,10 +5,11 @@ image w/ text ---- overlapping images -- images on the left
 - Draggable section
 
 {% endcomment %}
-
+<div id="image-stack-left">
 <div class="container full-width--true">
     <div class="sixteen columns">
-        <div class="four columns">
+      <div class="image-stack">
+        <div class="image-stack__item image-stack__item--top">
             {% if section.settings.image1 != blank %}
             {% include 'image-element', image: section.settings.image1.src, alt: section.settings.image1.src %}
           {% else %}
@@ -17,7 +18,7 @@ image w/ text ---- overlapping images -- images on the left
             </p>
           {% endif %}
         </div>
-        <div class="four columns">
+        <div class="image-stack__item image-stack__item--bottom">
 {% if section.settings.image2 != blank %}
             {% include 'image-element', image: section.settings.image2.src, alt: section.settings.image2.alt %}
           {% else %}
@@ -26,7 +27,7 @@ image w/ text ---- overlapping images -- images on the left
             </p>
           {% endif %}
         </div>
-
+      </div>
         <div class="eight columns">
             {% if section.settings.title != blank %}
 <h2>{{ section.settings.title }}</h2>
@@ -46,7 +47,7 @@ image w/ text ---- overlapping images -- images on the left
        
     </div>
 </div>
-
+</div>
 {% schema %}
 {
   "name": "Text with two images left",
