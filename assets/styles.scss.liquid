@@ -12057,6 +12057,7 @@ $primary-font-color: #FADCDC;
 $secondary-font-color: #4123AE;
 $accent-font: #ABCE37;
 $neon-green-accent: #B6E618;
+$muted-green-accent: #96973f;
 $dark-purple: #2e1f1f;
 $testimonial-headline: 75px;
 $testimonial-line-height: 70px;
@@ -12066,6 +12067,8 @@ $subheading-font-size: 32px;
 $header-letter-spacing: 1.13px;
 $subheader-letter-spacing: 2px;
 $custom-line-height: 46px;
+$footer-text-color: #3e2626;
+$black: #000000;
 /*buttons*/
 $button-font-size: 14px;
 $button-letter-spacing: 3px;
@@ -12364,27 +12367,32 @@ h6 a, #nav li a, div.title a,
 #image-stack-right{
   background-color: $tertiary-brand-background;
 .container {
-    .eight {
+  padding: 0;
+    .one-half {
       text-align: center;
     h2 {
       color: $secondary-font-color;
-      
+      margin-bottom: 111px;
     }
     h3 {
       color: $secondary-font-color;
       font-size: $heading-font-size;
       line-height: $custom-line-height;
-      padding: 20% 10% 5% 10%;
+      max-width: 396px;
       text-transform: none;
-      width: 80%;
+      margin: auto;
     }
     p {
       color: $dark-purple;
+      max-width: 380px;
+      margin: auto;
     }
     a.action_button{
       color: $secondary-font-color;
       background-color: transparent;
       border: 1.25px solid $secondary-font-color;
+      margin-top: 173px;
+      margin-bottom: 50px;
     }
     }
   .image-stack {
@@ -12395,7 +12403,7 @@ h6 a, #nav li a, div.title a,
   .image-stack__item--top{
     grid-column: 1 / span 8;
     grid-row: 1; 
-    padding-top: 60%;
+    padding-top: 73%;
     z-index: 1;
   }
   .image-stack__item--bottom{
@@ -12408,19 +12416,141 @@ h6 a, #nav li a, div.title a,
 /***************home page image stack left*********/
 
 #image-stack-left{
+  background-color: $quad-brand-background;
+  
+ 
    div.image-stack {
-    display: grid;
     grid-template-columns: repeat(12, 1fr);
     position: relative;
+    display: grid;
+   
   }
   .image-stack__item--top{
-    grid-column: 1 / span 8;
+    grid-column:  5/ span 6;
     grid-row: 1; 
-    padding-top: 30%;
+    padding-top: 75%;
     z-index: 1;
   }
   .image-stack__item--bottom{
-    grid-column: 4 / -1;
+    grid-column: 2 / span 8;
     grid-row: 1;
+    padding-top: 118px;
   }
+  .one-half {
+   text-align: center;
+    h2 {
+      color: $accent-font;
+      margin-bottom: 111px;
+    }
+    h3 {
+      color: $accent-font;
+      font-size: $heading-font-size;
+      line-height: $custom-line-height;
+      max-width: 396px;
+      text-transform: none;
+      margin: auto;
+    }
+    p {
+      margin: auto;
+      max-width: 380px;
+    }
+    a.action_button{
+      color: $accent-font;
+      background-color: transparent;
+      border: 1.25px solid $accent-font;
+      margin-top: 140px;
+      margin-bottom: 50px;
+    }
+  }
+}
+
+/**********custom include featured blog*********/
+
+#custom-featured-blog {
+  h2 > a {
+    color: $secondary-font-color;
+  }
+  #custom-blog-sub-title {
+    display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 20px;
+  h3{
+    max-width: 250px;
+   a {
+    color: $secondary-font-color;
+  }
+
+  a.continue-button {
+    color: $muted-green-accent;
+  }
+}
+  }
+}
+/***********rich text button "read more on the blog"*******/
+#shopify-section-1589299176318 {
+  a.action_button {
+    background-color: transparent;
+    color: $secondary-font-color;
+  }
+}
+
+/**************footer*****************/
+
+#contact_form {
+  input.contact_email {
+    width: 80%;
+    background-color: transparent;
+    border: 1.5px solid $black;
+    text-transform: uppercase;
+
+} 
+input.action_button {
+background-color: transparent;
+color: $footer-text-color;
+border: 1.5px solid $black;
+}
+}
+#custom-footer > div > div:nth-child(1) > div {
+  max-width: 212px;
+  margin: auto;
+}
+
+#custom-footer > div > div:nth-child(2){
+  text-align: center;
+}
+
+#custom-footer > div > div:nth-child(3){
+div {
+  h6 {
+    display: none;
+  }
+  div > ul {
+   
+list-style: none; 
+margin: 60px 10px 10px 10px;
+padding: 0; 
+display: flex; 
+li {
+ 
+}
+li:nth-child(1) {
+ flex: 4
+}
+li:nth-child(2) {
+ flex: 1
+}
+li:nth-child(3) {
+ flex: 1;
+}
+li:nth-child(4) {
+ flex: 1;
+}
+li:nth-child(5) {
+ flex: 4;
+ text-align: right;
+}
+  }
+ 
+}
 }

@@ -7,8 +7,8 @@ image w/ text ---- overlapping images -- images on the left
 {% endcomment %}
 <div id="image-stack-left">
 <div class="container full-width--true">
-    <div class="sixteen columns">
-      <div class="image-stack">
+   
+      <div class="one-half columns image-stack">
         <div class="image-stack__item image-stack__item--top">
             {% if section.settings.image1 != blank %}
             {% include 'image-element', image: section.settings.image1.src, alt: section.settings.image1.src %}
@@ -28,12 +28,12 @@ image w/ text ---- overlapping images -- images on the left
           {% endif %}
         </div>
       </div>
-        <div class="eight columns">
+        <div class="one-half columns">
             {% if section.settings.title != blank %}
 <h2>{{ section.settings.title }}</h2>
 {% endif %}
 {% if section.settings.subtitle != blank %}
-<h3>{{ section.settings.subtitle }}</h3>
+<h3 class="subtitle">{{ section.settings.subtitle }}</h3>
 {% endif %}
 {% if section.settings.paragraph != blank %}
 <p>{{ section.settings.paragraph }}</p>
@@ -45,7 +45,7 @@ image w/ text ---- overlapping images -- images on the left
 {% endif %}
         </div>
        
-    </div>
+   </div>
 </div>
 </div>
 {% schema %}

@@ -7,13 +7,14 @@ image w/ text ---- overlapping images -- images on the right
 {% endcomment %}
 <div id="image-stack-right">
 <div class="container full-width--true">
-    <div class="sixteen columns">
-        <div class="eight columns">
+
+   
+        <div class="one-half columns">
             {% if section.settings.title != blank %}
 <h2>{{ section.settings.title }}</h2>
 {% endif %}
 {% if section.settings.subtitle != blank %}
-<h3>{{ section.settings.subtitle }}</h3>
+<h3 class="subtitle">{{ section.settings.subtitle }}</h3>
 {% endif %}
 {% if section.settings.paragraph != blank %}
 <p>{{ section.settings.paragraph }}</p>
@@ -46,7 +47,7 @@ image w/ text ---- overlapping images -- images on the right
         </div>
     </div>
 </div>
-</div>
+
 {% schema %}
 {
   "name": "Text with two images",

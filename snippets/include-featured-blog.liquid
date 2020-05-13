@@ -17,7 +17,7 @@
   {% assign blog_comment_count = section.settings.blog_comment_count %}
   {% assign read_more_link = section.settings.read_more_link %}
 {% endif %}
-
+<div id="custom-featured-blog">
 <div class="container">
   <div class="section clearfix homepage_content">
     {% if title != blank %}
@@ -36,10 +36,16 @@
               {% include 'image-element', image: article.image, alt: article.image.alt %}
             </a>
           {% endif %}
-
-          <h3 class="sub_title">
+<div id="custom-blog-sub-title">
+          <h3 >
             <a href="{{ article.url }}">{{ article.title }}</a>
+            
           </h3>
+          {% if read_more_link %}
+          <a href="{{ article.url }}" {% if settings.read_more_style == 'button' %}class="action_button continue-button"{% endif %}>{{ 'blogs.general.continue_reading_html' | t }}</a>
+        {% endif %}
+        </div>
+          {% comment %}
           <p class="blog_meta">
             {% if blog_author %}
               <span>{{ 'blogs.article.by_author' | t: author: article.author }}</span>
@@ -65,7 +71,7 @@
               {% endif %}
             {% endif %}
           </p>
-
+{% endcomment %}
           {% if blog_tags %}
             <div class="blog_meta tags">
               {% for tag in article.tags %}
@@ -77,9 +83,7 @@
           {% if article.excerpt != blank %}
             <div class="blog_excerpt">{{ article.excerpt }}</div>
           {% endif %}
-          {% if read_more_link %}
-            <a href="{{ article.url }}" {% if settings.read_more_style == 'button' %}class="action_button continue-button"{% endif %}>{{ 'blogs.general.continue_reading_html' | t }}</a>
-          {% endif %}
+         
         </div>
       {% endfor %}
     {% else %}
@@ -132,5 +136,7 @@
         </div>
       {% endfor %}
     {% endif %}
+    
   </div>
+</div>
 </div>

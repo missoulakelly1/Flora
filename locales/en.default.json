@@ -39,8 +39,8 @@
       "subscriber_first_name": "First Name",
       "subscriber_last_name": "Last Name",
       "success_text": "Thank you for joining our mailing list!",
-      "placeholder": "Enter your email address...",
-      "submit": "Sign Up"
+      "placeholder": "Join our newsletter",
+      "submit": "Submit"
     },
     "breadcrumbs": {
       "home": "Home",
